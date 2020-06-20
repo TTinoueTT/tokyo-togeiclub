@@ -1,0 +1,76 @@
+// 聖杯レイアウト(情報量、コンテンツが多いサイトに適す)
+body {
+  // background-color: #505b99;
+  font-size: 1.5rem;
+  // color: #e42e2e;
+  // width: 800px;
+  margin: 0;
+  min-height: 100vh;
+  display: flex; //body階層の横並び指定
+  flex-direction: column;
+
+  header {
+    height: 150px;
+  }
+
+
+  div {
+    display: flex;
+    flex: 1;
+
+    main {
+      flex: 1;
+    }
+
+    nav {
+      width: 40%; //サイドバー用
+      min-width: 400px;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: space-between;
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      div {
+        // display: block;
+        margin-top: auto;
+        // align-self: flex-end;
+        height: 100px;
+      }
+
+    }
+
+    aside {
+      width: 200px;
+    }
+  }
+
+  footer {
+    height: 200px;
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+
+  body {
+    width: 100%;
+
+    div {
+      flex-direction: column;
+
+      main {
+        order: -1;
+      }
+
+      nav,
+      aside {
+        width: 100%;
+      }
+    }
+  }
+}
